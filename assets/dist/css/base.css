@@ -1,0 +1,502 @@
+/*-----------------------------------------------------------
+* Nombre del proyecto: Base
+* Nombre del archivo:  base.styl
+* Descripción: hoja de estilos global
+* Fecha de creación: __ de abril - de 2015
+* Autor: Esteban Vera
+* Correo: esteban.vg@outlook.com, esteban.vera@imagina.co
+
+------------------------------------------------------------*/
+/*--------------------COMENTARIOS-----------------------------
+* Ancho: 960px
+* Parallax: No
+* Responsivo: Si
+-------------------------------------------------------------*/
+/**
+ * CONTENIDO...........Lo está leyendo!!
+ * MAGNIFIC-POPUP......Estilos pop-ups
+ * FOUNDATION..........Estilos grilla
+ * RESET...............Establece los valores iniciales
+ * FONT-FACE...........Importamos fuentes de iconos y font-face
+ * NIB.................Mixins para stylus
+ * VARIABLES...........Colores que se van a utilizar en la página
+ * MIXINS..............Funciones globales que se van a utilizar en stylus
+ * CLASES GLOBALES.....Clases que se van a utilizar en el html
+ * POP-UPS.............Estilos para los pop-ups
+ * Body y Container....Estilos body y base de la página
+ * Loader..............Estilos loading de la página
+ * Header..............Estilos encabezado de la página
+ * Internas............Estilos internas
+ * Footer..............Estilos pie de página
+ */
+/*------------------------------------*    $MAGNIFIC-POPUP
+\*------------------------------------*/
+@import '../css/magnific-popup.css';
+/*------------------------------------*    $FOUNDATION
+\*------------------------------------*/
+@import '../css/foundation.css';
+/*------------------------------------*    $RESET
+\*------------------------------------*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+* {
+  outline: none;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+p {
+  line-height: 20px;
+  margin: 0 0 1em 0;
+}
+img {
+  vertical-align: top;
+  margin: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+/*------------------------------------*    $FONT-FACE
+\*------------------------------------*/
+@font-face {
+  font-family: 'aeroregular';
+  src: url("../fuentes/681.eot");
+  src: url("../fuentes/681.eot?#iefix") format('embedded-opentype'), url("../fuentes/681.woff") format('woff'), url("../fuentes/681.ttf") format('truetype'), url("../fuentes/681.svg#aeroregular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*------------------------------------*    $NIB
+\*------------------------------------*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+* {
+  outline: none;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+p {
+  line-height: 20px;
+  margin: 0 0 1em 0;
+}
+img {
+  vertical-align: top;
+  margin: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+/*------------------------------------*    $variables
+\*------------------------------------*/
+/*------------------------------------*    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*    $CLASES GLOBALES
+\*------------------------------------*/
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.border {
+  border: 1px solid #cc181e;
+}
+.clear {
+  clear: both;
+}
+.relative {
+  position: relative;
+}
+.padding {
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+}
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+  display: block;
+}
+.margen {
+  margin: 20px auto;
+}
+/*------------------------------------*    $POP-UPS
+\*------------------------------------*/
+.popup-gallery {
+  display: none;
+}
+.white-popup-block {
+  background: #fff;
+  text-align: left;
+  margin: 40px auto;
+  position: relative;
+  z-index: 999;
+}
+.white-popup-width-small {
+  max-width: 500px;
+}
+.white-popup-width-medium {
+  max-width: 900px;
+}
+.white-popup-block img {
+  margin: 0 auto;
+  display: block;
+}
+.white-popup-block h4 {
+  text-align: center;
+  margin: 10px auto 15px auto;
+  text-align: center;
+  font-size: 20px;
+}
+.header-pop-up {
+  background: #009542;
+  color: #fff;
+  padding: 13px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 20px;
+}
+.header-pop-up b {
+  font-weight: bold;
+}
+.contenido-pop-up {
+  padding: 13px 15px;
+  color: #333;
+}
+.contenido-pop-up .espacio {
+  padding: 0;
+}
+/*------------------------------------*    $BODY Y CONTAINER
+\*------------------------------------*/
+body {
+  background: #ccc;
+  color: #333;
+  font-size: 14px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+/*------------------------------------*    $LOADER
+\*------------------------------------*/
+/*------------------------------------*    $HEADER
+\*------------------------------------*/
+/*------------------------------------*    $HOME
+\*------------------------------------*/
+/*------------------------------------*    $FOOTER
+\*------------------------------------*/
+/*------------------------------------*    $MEDIAQUIERIES
+\*------------------------------------*/
+@media only screen and (max-width: 1000px) {
+  header,
+  footer {
+    width: 960px;
+  }
+}

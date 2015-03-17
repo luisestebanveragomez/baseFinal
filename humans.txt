@@ -1,0 +1,25 @@
+/* THANKS */
+
+	Front-end developer: Esteban Vera
+	Twitter: @kiokotzu
+	Email:esteban.vg@outlook.com, esteban.vera@imagina.co
+	From: Colombia, bogotá, Spain
+		
+
+/* SITE */
+	Last update:2015/01/04
+	Language: Castellano
+	Doctype:HTML5
+	IDE: Sublime Text, FileZilla, Photoshop
+
+
+
+/* TECHNOLOGY */
+	HTML5,
+	CSS3
+	Normalize.css,
+	jQuery,
+	Modernizr,
+	php,
+	stylus,
+	gulp

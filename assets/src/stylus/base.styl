@@ -1,0 +1,294 @@
+/*-----------------------------------------------------------
+* Nombre del proyecto: Base
+* Nombre del archivo:  base.styl
+* Descripción: hoja de estilos global
+* Fecha de creación: __ de abril - de 2015
+* Autor: Esteban Vera
+* Correo: esteban.vg@outlook.com, esteban.vera@imagina.co
+
+------------------------------------------------------------*/
+/*--------------------COMENTARIOS-----------------------------
+* Ancho: 960px
+* Parallax: No
+* Responsivo: Si
+-------------------------------------------------------------*/
+
+/**
+ * CONTENIDO...........Lo está leyendo!!
+ * MAGNIFIC-POPUP......Estilos pop-ups
+ * FOUNDATION..........Estilos grilla
+ * RESET...............Establece los valores iniciales
+ * FONT-FACE...........Importamos fuentes de iconos y font-face
+ * NIB.................Mixins para stylus
+ * VARIABLES...........Colores que se van a utilizar en la página
+ * MIXINS..............Funciones globales que se van a utilizar en stylus
+ * CLASES GLOBALES.....Clases que se van a utilizar en el html
+ * POP-UPS.............Estilos para los pop-ups
+ * Body y Container....Estilos body y base de la página
+ * Loader..............Estilos loading de la página
+ * Header..............Estilos encabezado de la página
+ * Internas............Estilos internas
+ * Footer..............Estilos pie de página
+ */
+
+/*------------------------------------*\
+    $MAGNIFIC-POPUP
+\*------------------------------------*/
+@import '../css/magnific-popup.css'
+
+
+
+
+
+
+
+
+/*------------------------------------*\
+    $FOUNDATION
+\*------------------------------------*/
+@import '../css/foundation.css'
+
+
+
+
+
+
+
+
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+@import 'normalize.styl'
+
+
+
+
+
+
+/*------------------------------------*\
+    $FONT-FACE
+\*------------------------------------*/
+@import 'fuentes.styl'
+
+
+
+
+
+/*------------------------------------*\
+    $NIB
+\*------------------------------------*/
+@import "nib"
+
+
+
+
+/*------------------------------------*\
+    $variables
+\*------------------------------------*/
+azul = #425f9c
+azul2 = #55acee
+blanco = #fff
+gris = #edf2f3
+gris_os = #3a3a3a
+naranja = #ef7f2d
+negro = #333333
+rojo = #cc181e
+verde = #009542
+vendor-prefixes = webkit o ms moz official
+
+
+
+
+
+
+
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+cursiva()
+  font-style italic
+
+may()
+  text-transform uppercase
+
+bold()
+  font-weight bold
+
+block()
+  display block
+
+centrar()
+  margin 0 auto
+  block()
+
+alinear()
+   display inline-block
+   vertical-align top
+   zoom 1
+
+font-regular()
+  font-family 'aeroregular', sans-serif
+
+font(valor)
+  font-size valor
+
+box()
+  box-sizing border-box
+
+
+
+
+
+
+
+
+/*------------------------------------*\
+    $CLASES GLOBALES
+\*------------------------------------*/
+.left
+  float left
+
+.right
+  float right
+
+.border
+  border 1px solid rojo
+
+.clear
+  clear both
+
+.relative
+  position relative
+
+.padding
+  padding-left 0.9375em
+  padding-right 0.9375em
+
+.wrapper
+  width 960px
+  centrar()
+
+.margen
+  margin 20px auto
+
+
+
+
+
+
+/*------------------------------------*\
+    $POP-UPS
+\*------------------------------------*/
+.popup-gallery
+  display none
+
+.white-popup-block
+  background blanco
+  text-align left
+  margin 40px auto
+  position relative
+  z-index 999
+
+.white-popup-width-small
+  max-width 500px
+  
+.white-popup-width-medium
+  max-width 900px
+
+.white-popup-block img 
+  margin 0 auto
+  display block
+
+.white-popup-block h4 
+  text-align center
+  margin 10px auto 15px auto
+  text-align center
+  font(20px)
+
+.header-pop-up
+  background verde
+  color blanco
+  padding 13px 15px
+  font-light()
+  text-align center
+  may()
+  font(20px)
+  line-height 20px
+  b
+    font-weight bold
+    font-bold()
+
+.contenido-pop-up
+  padding 13px 15px
+  color negro
+
+.contenido-pop-up
+  .espacio
+    padding 0 
+
+
+
+
+
+
+
+/*------------------------------------*\
+    $BODY Y CONTAINER
+\*------------------------------------*/
+body
+  background #ccc
+  color negro
+  font(14px)
+  transition .3s
+ 
+
+
+
+
+
+
+/*------------------------------------*\
+    $LOADER
+\*------------------------------------*/
+
+
+
+
+
+
+
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+
+
+
+
+
+
+/*------------------------------------*\
+    $HOME
+\*------------------------------------*/
+
+
+
+
+
+
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+
+
+
+
+
+
+/*------------------------------------*\
+    $MEDIAQUIERIES
+\*------------------------------------*/
+@media only screen and (max-width: 1000px)
+  header
+  footer
+    width:960px
