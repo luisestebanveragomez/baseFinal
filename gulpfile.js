@@ -23,12 +23,12 @@ var gulp        = require('gulp'),
 
 
 
-
 /*------------------------------------*\
     $RUTAS
 \*------------------------------------*/
 
 var src_stylus = "assets/src/stylus/base.styl",
+    //importante tener cuidado con el orden de este array, posee las rutas de los archivos .js, esto implica no tener conflictos entre librerias
     src_js     = ['assets/src/js/lib/jquery-1.11.0.min.js','assets/src/js/funciones.js','assets/src/js/**/*.js'],
     src_imgs   = "assets/src/imgs/*.*",
     dest_css   = "assets/dist/css",
