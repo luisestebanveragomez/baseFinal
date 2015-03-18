@@ -17,8 +17,9 @@ var gulp        = require('gulp'),
     uglify      = require('gulp-uglify'),
     notify      = require("gulp-notify"),
     jshint      = require('gulp-jshint'),
-    imagemin    = require('gulp-imagemin'),
-    pngquant    = require('imagemin-pngquant');
+    sass        = require('gulp-sass');
+    // imagemin    = require('gulp-imagemin'),
+    // pngquant    = require('imagemin-pngquant');
 
 
 
@@ -32,9 +33,11 @@ var src_stylus = "assets/src/stylus/base.styl",
     //importante tener cuidado con el orden de este array, posee las rutas de los archivos .js, esto implica no tener conflictos entre librerias
     src_js     = ['assets/src/js/lib/jquery-1.11.0.min.js','assets/src/js/funciones.js','assets/src/js/**/*.js'],
     src_imgs   = "assets/src/imgs/*.*",
+    src_sass   = "assets/src/sass/base.scss",
     dest_css   = "assets/dist/css",
     dest_js    = "assets/dist/js",    
-    dest_imgs  = "assets/dist/imgs/";
+    dest_imgs  = "assets/dist/imgs/",
+    dest_sass  = "assets/dist/sass/";
 
 
 
@@ -91,6 +94,20 @@ gulp.task('stylus', function () {
 
 
 /*------------------------------------*\
+    $SASS
+\*------------------------------------*/
+gulp.task('sass', function () {
+    return gulp.src(src_sass)
+      .pipe(plumber({
+        errorHandler : linea
+      }))
+      .pipe(sass())
+      .pipe(gulp.dest(dest_sass));
+      .pipe(notify("Compilo SASS"));
+});
+
+
+/*------------------------------------*\
     $JAVASCRIPT
 \*------------------------------------*/
 
@@ -114,17 +131,17 @@ gulp.task('js',function(){
     $IMAGENES
 \*------------------------------------*/
 
-gulp.task('img', function () {
-    return gulp.src([src_imgs])
-        .pipe(imagemin({
-            progressive: false,
-            optimizationLevel : 6,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))
-        .pipe(gulp.dest(dest_imgs))
-        .pipe(notify("Compilo Imagenes"));
-});
+// gulp.task('img', function () {
+//   return gulp.src([src_imgs])
+//     .pipe(imagemin({
+//         progressive: false,
+//         optimizationLevel : 6,
+//         svgoPlugins: [{removeViewBox: false}],
+//         use: [pngquant()]
+//     }))
+//     .pipe(gulp.dest(dest_imgs))
+//     .pipe(notify("Compilo Imagenes"));
+// });
 
 
 
@@ -145,6 +162,7 @@ gulp.task('img', function () {
 gulp.task('watch',function(){
   gulp.watch(src_stylus,['stylus']);
   gulp.watch(src_js,['js']);
+  gulp.watch(src_sass,['sass']);
 });
 
 
@@ -157,4 +175,4 @@ gulp.task('watch',function(){
     $POR DEFECTO
 \*------------------------------------*/
 
-gulp.task('default',['watch','js', 'stylus']);
+gulp.task('default',['watch','js', 'stylus','sass']);
