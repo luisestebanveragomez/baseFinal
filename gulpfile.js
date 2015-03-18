@@ -17,7 +17,8 @@ var gulp        = require('gulp'),
     uglify      = require('gulp-uglify'),
     notify      = require("gulp-notify"),
     jshint      = require('gulp-jshint'),
-    imagemin    = require('gulp-imagemin');
+    imagemin    = require('gulp-imagemin'),
+    pngquant    = require('imagemin-pngquant');
 
 
 
@@ -115,7 +116,12 @@ gulp.task('js',function(){
 
 gulp.task('img', function () {
     return gulp.src([src_imgs])
-        .pipe(imagemin())
+        .pipe(imagemin({
+            progressive: false,
+            optimizationLevel : 6,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
         .pipe(gulp.dest(dest_imgs))
         .pipe(notify("Compilo Imagenes"));
 });

@@ -475,7 +475,7 @@ img {
 /*------------------------------------*    $BODY Y CONTAINER
 \*------------------------------------*/
 body {
-  background: #ccc;
+  background: #f00;
   color: #333;
   font-size: 14px;
   -webkit-transition: 0.3s;
